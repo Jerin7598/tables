@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table</title>
+        <style>
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.t{
+    text-align: center;
+    margin: 100px;
+}
+input{
+ padding: 8px;
+ border-radius: 4px;
+ background-color: transparent;
+ color: black;
+}
+button{
+    padding: 8px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+.o{
+    text-align: center;
+    margin-top: -50px; 
+     background-color: aqua;
+      display: none;
+      margin-left: 550px;
+      margin-right: 550px;
+      padding: 10px;
+      border-radius: 5px;
+      
+}
+ul{
+ list-style-type: none; 
+}
+p{
+    text-align: left;
+    font-size: 20px;
+}
+body{
+    background-color: rgb(125, 253, 255);
+}
+.ta{
+    font-size: 30px;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="t">
+        <h2 class="ta">Tables</h3><br>
+        <input placeholder="enter the number" type="number" id="a1"><br><br>
+        <button class="ok" onclick="touch()" id="t1">ok</button>
+    </div>
+    <div id="aa" class="o">
+        <h2>Output</h2><br>
+      <p id="a"></p>
+    </div>
+
+    </body>
+    <script>
+        function touch(){
+        let v=document.getElementById("a1").value;
+       let c="<ul>"
+        for(let i=1;i<11;i++){
+            let z=i * v;
+            c=c+"<li>"+ i + "*" + v + "=" + z +"</li>"
+
+        }
+        c=c+"</ul>";
+        document.getElementById("a").innerHTML=c;
+        document.getElementById("aa").style.display="block"
+    }
+        
+    </script>
+</html>
